@@ -8,9 +8,13 @@
 
 import Foundation
 import UIKit
+ 
 
 class MyCell: UITableViewCell {
     
+   
     
+    @IBOutlet weak var heroImage: UIImageView!
+    @IBOutlet weak var heroLabel: UILabel!
     
 }
