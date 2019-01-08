@@ -10,17 +10,14 @@ import UIKit
 
 
 
-protocol ViewControllerDelegate: class{
-    func assignImage(_ image: UIImage?)
-    func assignBio(_ bio: String?)
-    func assignName(_ name: String?)
-}
+var HeroesArray = [Hero]()
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    weak var delegate: ViewControllerDelegate?
-    var HeroesArray = [Hero]()
+   
+    
     @IBOutlet weak var tableView: UITableView!
+   
     
     let Spiderman = Hero(name: "Spider-Man", picture: UIImage(named: "Spiderman")!, bio: "Bitten by a radioactive spider, high school student Peter Parker gained the speed, strength and powers of a spider. Adopting the name Spider-Man, Peter hoped to start a career using his new abilities. Taught that with great power comes great responsibility, Spidey has vowed to use his powers to help people.")
     
@@ -35,6 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return HeroesArray.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->    UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCell
         cell.heroImage.image = HeroesArray[indexPath.row].picture
@@ -44,14 +42,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      print("row \(indexPath.row) was tapped")
       
-        delegate?.assignBio(HeroesArray[0].bio)
-        delegate?.assignName(HeroesArray[0].name)
-        delegate?.assignImage(HeroesArray[0].picture)
-    
+ 
     }
     
     
+    
+   
     
     func populateHeroesArray() {
    
@@ -60,6 +58,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         HeroesArray.append(Ironman)
         HeroesArray.append(Hulk)
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+       
+        print("hello")
     }
     
     override func viewWillAppear(_ animated: Bool) {

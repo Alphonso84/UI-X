@@ -10,28 +10,13 @@ import Foundation
 import UIKit
 
 
-class HeroDetailViewController: UIViewController, ViewControllerDelegate {
-    
-    
-    
+class HeroDetailViewController: UIViewController {
+   
     @IBOutlet weak var heroImageView: UIImageView!
     
     @IBOutlet weak var heroBio: UITextView!
     
    
-    
-    func assignImage(_ image: UIImage?) {
-       self.heroImageView.image = image
-        
-    }
-    func assignBio(_ bio: String?) {
-       heroBio.text = bio
-    }
-    
-    func assignName(_ name: String?) {
-        navigationController?.title = name
-    }
-    
     
     override func viewWillAppear(_ animated: Bool) {
        
@@ -39,10 +24,15 @@ class HeroDetailViewController: UIViewController, ViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+     
     }
     
+}
+extension HeroDetailViewController: HeroInfoDelegate {
     
-    
-    
+     func assignInfo(_ image: UIImage?, _ bio: String?, _ name: String?) {
+        heroImageView.image = image
+        heroBio.text = bio
+      
+    }
 }
