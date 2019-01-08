@@ -10,11 +10,19 @@ import UIKit
 
 
 
-var HeroesArray = [Hero]()
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+
+@objc protocol HeroInfoDelegate: class {
+    func assignInfo(_ image: UIImage?, _ bio: String?, _ name: String?)
+    
+}
+
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
    
+    
+ weak var myDelegate: HeroInfoDelegate?
+   var HeroesArray = [Hero]()
     
     @IBOutlet weak var tableView: UITableView!
    
@@ -37,13 +45,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCell
         cell.heroImage.image = HeroesArray[indexPath.row].picture
         cell.heroLabel.text = HeroesArray[indexPath.row].name
-       
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       print("row \(indexPath.row) was tapped")
-      
+        
+        myDelegate?.assignInfo(HeroesArray[indexPath.row].picture, HeroesArray[indexPath.row].bio, HeroesArray[indexPath.row].name)
+
  
     }
     
@@ -72,10 +81,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        
-        
+    
     }
     
     
 }
+
+
 

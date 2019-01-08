@@ -10,7 +10,12 @@ import Foundation
 import UIKit
 
 
-class HeroDetailViewController: UIViewController {
+class HeroDetailViewController: UIViewController, HeroInfoDelegate {
+        func assignInfo(_ image: UIImage?, _ bio: String?, _ name: String?) {
+            heroImageView.image = image
+            heroBio.text = bio
+        }
+        
    
     @IBOutlet weak var heroImageView: UIImageView!
     
@@ -24,15 +29,9 @@ class HeroDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ViewController().myDelegate = self
      
     }
     
 }
-extension HeroDetailViewController: HeroInfoDelegate {
-    
-     func assignInfo(_ image: UIImage?, _ bio: String?, _ name: String?) {
-        heroImageView.image = image
-        heroBio.text = bio
-      
-    }
-}
+
