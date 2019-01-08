@@ -11,26 +11,30 @@ import UIKit
 
 
 class HeroDetailViewController: UIViewController, HeroInfoDelegate {
-        func assignInfo(_ image: UIImage?, _ bio: String?, _ name: String?) {
-            heroImageView.image = image
-            heroBio.text = bio
-        }
-        
-   
+    
     @IBOutlet weak var heroImageView: UIImageView!
     
     @IBOutlet weak var heroBio: UITextView!
     
    
-    
-    override func viewWillAppear(_ animated: Bool) {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
        
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        ViewController().myDelegate = self
-     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //MARK: step 5 create a reference of Class B and bind them through the prepareforsegue method
+        if let nav = segue.destination as? UINavigationController, let classBVC = nav.topViewController as? ViewController {
+            classBVC.myDelegate = self
+        }
+        
+    }
+    func assignInfo(_ image: UIImage?, _ bio: String?, _ name: String?) {
+        heroImageView.image = image
+        heroBio.text = bio
     }
     
 }
