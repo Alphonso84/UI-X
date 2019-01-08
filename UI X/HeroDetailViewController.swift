@@ -7,3 +7,24 @@
 //
 
 import Foundation
+import UIKit
+
+
+class HeroDetailViewController: UIViewController {
+    
+    @IBOutlet weak var heroImage: UIImageView!
+    @IBOutlet weak var heroBio: UITextView!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    override func viewDidLoad() {
+        
+    }
+    
+    
+    
+    
+}

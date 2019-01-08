@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		899538EB21E432A0003F12B7 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899538EA21E432A0003F12B7 /* HeroDetailViewController.swift */; };
+		899538ED21E437F2003F12B7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899538EC21E437F2003F12B7 /* Models.swift */; };
 		89B8B55C21E285DB00341AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B8B55B21E285DB00341AEA /* AppDelegate.swift */; };
 		89B8B55E21E285DB00341AEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B8B55D21E285DB00341AEA /* ViewController.swift */; };
 		89B8B56121E285DB00341AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B8B55F21E285DB00341AEA /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		899538EA21E432A0003F12B7 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		899538EC21E437F2003F12B7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		89B8B55821E285DB00341AEA /* UI X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UI X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B8B55B21E285DB00341AEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89B8B55D21E285DB00341AEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				89B8B55B21E285DB00341AEA /* AppDelegate.swift */,
+				899538EC21E437F2003F12B7 /* Models.swift */,
 				89B8B55D21E285DB00341AEA /* ViewController.swift */,
+				899538EA21E432A0003F12B7 /* HeroDetailViewController.swift */,
 				89B8B55F21E285DB00341AEA /* Main.storyboard */,
 				89B8B56D21E2867E00341AEA /* TableViewCell.swift */,
 				89B8B56221E285DF00341AEA /* Assets.xcassets */,
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				89B8B56E21E2867E00341AEA /* TableViewCell.swift in Sources */,
+				899538EB21E432A0003F12B7 /* HeroDetailViewController.swift in Sources */,
 				89B8B55E21E285DB00341AEA /* ViewController.swift in Sources */,
 				89B8B55C21E285DB00341AEA /* AppDelegate.swift in Sources */,
+				899538ED21E437F2003F12B7 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
