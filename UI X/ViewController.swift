@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 
-@objc protocol HeroInfoDelegate: class {
+ protocol HeroInfoDelegate {
     
     func assignInfo(_ image: UIImage?, _ bio: String?, _ name: String?)
     
@@ -19,7 +19,7 @@ import Foundation
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     
-    weak var myDelegate: HeroInfoDelegate?
+    var myDelegate: HeroInfoDelegate?
     var HeroesArray = [Hero]()
     @IBOutlet weak var tableView: UITableView!
    
@@ -48,7 +48,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-     myDelegate?.self.assignInfo(HeroesArray[indexPath.row].picture, HeroesArray[indexPath.row].bio, HeroesArray[indexPath.row].name)
+     myDelegate?.assignInfo(HeroesArray[indexPath.row].picture, HeroesArray[indexPath.row].bio, HeroesArray[indexPath.row].name)
 
     }
     
