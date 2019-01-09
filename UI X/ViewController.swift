@@ -46,10 +46,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-     myDelegate?.assignInfo(HeroesArray[indexPath.row].picture, HeroesArray[indexPath.row].bio, HeroesArray[indexPath.row].name)
-        
+     myDelegate?.self.assignInfo(HeroesArray[indexPath.row].picture, HeroesArray[indexPath.row].bio, HeroesArray[indexPath.row].name)
+
     }
     
     func populateHeroesArray() {
