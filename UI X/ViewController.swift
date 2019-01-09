@@ -7,9 +7,7 @@
 //
 
 import UIKit
-
-
-
+import Foundation
 
 
 @objc protocol HeroInfoDelegate: class {
@@ -18,16 +16,11 @@ import UIKit
     
 }
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    
     
     weak var myDelegate: HeroInfoDelegate?
-   
-    
-    
     var HeroesArray = [Hero]()
-    
     @IBOutlet weak var tableView: UITableView!
    
     
@@ -55,14 +48,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        myDelegate?.assignInfo(HeroesArray[indexPath.row].picture, HeroesArray[indexPath.row].bio, HeroesArray[indexPath.row].name)
-
- 
+     myDelegate?.assignInfo(HeroesArray[indexPath.row].picture, HeroesArray[indexPath.row].bio, HeroesArray[indexPath.row].name)
+        
     }
-    
-    
-    
-   
     
     func populateHeroesArray() {
    
@@ -73,21 +61,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-       
-       
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         populateHeroesArray()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
     
     }
-    
     
 }
 

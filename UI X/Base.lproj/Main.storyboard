@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UI_X" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="UI_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
                                         <connections>
                                             <outlet property="heroImage" destination="QeS-oD-MCg" id="89b-Ms-4Xx"/>
                                             <outlet property="heroLabel" destination="y6s-eq-KGh" id="7ZL-YX-2ti"/>
-                                            <segue destination="QcY-QE-txm" kind="push" id="U3p-Yo-6fd"/>
+                                            <segue destination="QcY-QE-txm" kind="show" id="U3p-Yo-6fd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
