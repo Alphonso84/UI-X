@@ -10,32 +10,27 @@ import Foundation
 import UIKit
 
 
-class HeroDetailViewController: UIViewController, HeroInfoDelegate {
+class HeroDetailViewController: UIViewController {
     
     @IBOutlet weak var heroImageView: UIImageView!
-    
     @IBOutlet weak var heroBio: UITextView!
+    //Properties are used to pass data from MainViewController
+    var heroImage = UIImage()
+    var detailImage = UIImage()
+    var bio = String()
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        //MARK: step 5 create a reference of Class B and bind them through the prepareforsegue method
-        if let nav = segue.destination as? UINavigationController, let A = nav.topViewController as? MainViewController {
-            A.myDelegate = self
-        }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let vc = MainViewController()
-//        vc.myDelegate = self
-    }
-    
-
-    func assignInfo(_ image: UIImage?, _ bio: String?, _ name: String?) {
-        heroImageView.image = image
+        heroImageView.image = detailImage
         heroBio.text = bio
     }
+    
+    
     
 }
 
