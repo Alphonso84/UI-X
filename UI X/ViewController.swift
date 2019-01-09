@@ -42,12 +42,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailController = storyboard?.instantiateViewController(withIdentifier: "HeroDetailViewController") as! HeroDetailViewController
+        let detailController = navigationController!.storyboard?.instantiateViewController(withIdentifier: "HeroDetailViewController") as! HeroDetailViewController
         
         detailController.detailImage = HeroesArray[indexPath.row].picture
         detailController.bio = "\(HeroesArray[indexPath.row].bio)"
         detailController.title = "\(HeroesArray[indexPath.row].name)"
-        navigationController!.present(detailController, animated: true, completion: nil)
+        
+        show(detailController, sender: self)
+        
     }
     
     func populateHeroesArray() {

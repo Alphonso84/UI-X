@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+
+//Model for Hero object
 struct Hero {
     var name: String
     var picture: UIImage
