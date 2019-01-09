@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mk8-S8-Uk4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qk9-is-dse">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,6 +60,7 @@
                                                 <constraint firstItem="QeS-oD-MCg" firstAttribute="centerY" secondItem="y6s-eq-KGh" secondAttribute="centerY" id="z3n-zh-Uv4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                         <connections>
                                             <outlet property="heroImage" destination="QeS-oD-MCg" id="89b-Ms-4Xx"/>
@@ -80,12 +85,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="fZ4-Xu-TIB"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="mk8-S8-Uk4" id="Iz7-ca-wb4"/>
                         <outlet property="tableView" destination="qk9-is-dse" id="bQE-Km-ZNO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1532" y="-86"/>
+            <point key="canvasLocation" x="1532" y="-86.453201970443359"/>
         </scene>
         <!--HeroDetailViewController-->
         <scene sceneID="FaP-07-bXm">
@@ -154,7 +160,7 @@
         <!--Item-->
         <scene sceneID="B2Q-gV-O0T">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="VUa-oW-f4M" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" hidesBarsOnSwipe="YES" id="VUa-oW-f4M" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="tKb-Uf-Yzj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vyg-lb-AKM">
