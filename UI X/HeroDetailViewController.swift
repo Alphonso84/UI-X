@@ -10,11 +10,13 @@ import Foundation
 import UIKit
 
 
-class HeroDetailViewController: UIViewController, UIScrollViewDelegate, UIScrollViewAccessibilityDelegate {
+class HeroDetailViewController: UIViewController, UIScrollViewDelegate, UIScrollViewAccessibilityDelegate, UITableViewDelegate {
+   
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var heroImageView: UIImageView!
     @IBOutlet weak var heroBio: UITextView!
+    @IBOutlet weak var tableView: UITableView!
     
     //Properties are used to pass data from MainViewController
     var heroImage = UIImage()
@@ -23,6 +25,15 @@ class HeroDetailViewController: UIViewController, UIScrollViewDelegate, UIScroll
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print("ScrollView scrolled bro")
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return HeroesArray.count
+    }
+    
+    private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "heroCell", for: indexPath)
+        cell.detailTextLabel?.text = "Full Name:      \(HeroesArray[indexPath.row].fullName)"
+        return cell
     }
     override func viewWillAppear(_ animated: Bool) {
         

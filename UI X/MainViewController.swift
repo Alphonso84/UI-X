@@ -12,7 +12,7 @@ import Foundation
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var HeroesArray = [Hero]()
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
@@ -43,14 +43,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func populateHeroesArray() {
         HeroesArray.removeAll()
-        HeroesArray.append(Spiderman)
-        HeroesArray.append(CaptAmerica)
-        HeroesArray.append(Falcon)
-        HeroesArray.append(BlackPanther)
+//        HeroesArray.append(Spiderman)
+//        HeroesArray.append(CaptAmerica)
+//        HeroesArray.append(Falcon)
+//        HeroesArray.append(BlackPanther)
         HeroesArray.append(Ironman)
-        HeroesArray.append(Thor)
-        HeroesArray.append(HawkEye)
-        HeroesArray.append(Hulk)
+//        HeroesArray.append(Thor)
+//        HeroesArray.append(HawkEye)
+//        HeroesArray.append(Hulk)
+       
         
     }
     //ADDS UIImage TO MIDDLE OF NAVIGATION BAR

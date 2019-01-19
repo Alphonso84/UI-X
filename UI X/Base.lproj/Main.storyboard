@@ -120,15 +120,37 @@
                                             <constraint firstAttribute="height" constant="281" id="4A6-E4-67T"/>
                                         </constraints>
                                     </imageView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hwp-bl-xCM">
+                                        <rect key="frame" x="42" y="845" width="291" height="716"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="heroCell" id="Vtj-AP-fef">
+                                                <rect key="frame" x="0.0" y="28" width="291" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vtj-AP-fef" id="edj-Is-hnV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="291" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="QcY-QE-txm" id="LgS-HO-xtn"/>
+                                            <outlet property="delegate" destination="QcY-QE-txm" id="MZO-UY-c0j"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="otp-2z-Qkb" secondAttribute="trailing" constant="42" id="4WF-VB-TeQ"/>
                                     <constraint firstItem="otp-2z-Qkb" firstAttribute="top" secondItem="M8x-J8-pDZ" secondAttribute="top" constant="98" id="BTi-4T-Cdd"/>
                                     <constraint firstItem="otp-2z-Qkb" firstAttribute="centerX" secondItem="M8x-J8-pDZ" secondAttribute="centerX" id="Cqq-tK-dRW"/>
+                                    <constraint firstItem="Hwp-bl-xCM" firstAttribute="top" secondItem="zTT-hv-ywa" secondAttribute="bottom" constant="44" id="GSE-Vp-Txg"/>
                                     <constraint firstItem="zTT-hv-ywa" firstAttribute="leading" secondItem="otp-2z-Qkb" secondAttribute="leading" id="Iby-cI-GXi"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hwp-bl-xCM" secondAttribute="bottom" constant="63" id="JxS-Ht-u29"/>
                                     <constraint firstItem="otp-2z-Qkb" firstAttribute="leading" secondItem="M8x-J8-pDZ" secondAttribute="leading" constant="42" id="O7U-br-mo5"/>
+                                    <constraint firstItem="Hwp-bl-xCM" firstAttribute="leading" secondItem="zTT-hv-ywa" secondAttribute="leading" id="Syl-PY-gHf"/>
                                     <constraint firstItem="zTT-hv-ywa" firstAttribute="trailing" secondItem="otp-2z-Qkb" secondAttribute="trailing" id="YnK-Dk-jds"/>
+                                    <constraint firstItem="Hwp-bl-xCM" firstAttribute="trailing" secondItem="zTT-hv-ywa" secondAttribute="trailing" id="bix-gC-COW"/>
                                     <constraint firstAttribute="bottom" secondItem="otp-2z-Qkb" secondAttribute="bottom" constant="1245" id="esO-Wc-blb"/>
                                     <constraint firstItem="zTT-hv-ywa" firstAttribute="top" secondItem="otp-2z-Qkb" secondAttribute="bottom" constant="32" id="v5z-4D-8cB"/>
                                 </constraints>
@@ -151,6 +173,7 @@
                         <outlet property="heroBio" destination="zTT-hv-ywa" id="f1k-mj-FDb"/>
                         <outlet property="heroImageView" destination="otp-2z-Qkb" id="255-9k-AUu"/>
                         <outlet property="scrollView" destination="M8x-J8-pDZ" id="2LX-Wh-Rf8"/>
+                        <outlet property="tableView" destination="Hwp-bl-xCM" id="pAa-JM-oLj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqz-Qy-O9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,7 +183,7 @@
         <!--Item-->
         <scene sceneID="B2Q-gV-O0T">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" hidesBarsOnSwipe="YES" id="VUa-oW-f4M" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="VUa-oW-f4M" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="tKb-Uf-Yzj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vyg-lb-AKM">
