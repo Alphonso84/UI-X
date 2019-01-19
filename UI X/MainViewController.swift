@@ -43,14 +43,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func populateHeroesArray() {
         HeroesArray.removeAll()
-//        HeroesArray.append(Spiderman)
-//        HeroesArray.append(CaptAmerica)
-//        HeroesArray.append(Falcon)
-//        HeroesArray.append(BlackPanther)
+        HeroesArray.append(Spiderman)
+        HeroesArray.append(CaptAmerica)
+        HeroesArray.append(Falcon)
+        HeroesArray.append(BlackPanther)
         HeroesArray.append(Ironman)
-//        HeroesArray.append(Thor)
-//        HeroesArray.append(HawkEye)
-//        HeroesArray.append(Hulk)
+        HeroesArray.append(Thor)
+        HeroesArray.append(HawkEye)
+        HeroesArray.append(Hulk)
        
         
     }

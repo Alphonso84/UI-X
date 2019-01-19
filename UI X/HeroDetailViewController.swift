@@ -27,12 +27,12 @@ class HeroDetailViewController: UIViewController, UIScrollViewDelegate, UIScroll
         print("ScrollView scrolled bro")
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return HeroesArray.count
+      return HeroesArray.count
     }
     
     private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "heroCell", for: indexPath)
-        cell.detailTextLabel?.text = "Full Name:      \(HeroesArray[indexPath.row].fullName)"
+        cell.detailTextLabel?.text = "Hello"
         return cell
     }
     override func viewWillAppear(_ animated: Bool) {

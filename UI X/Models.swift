@@ -15,13 +15,4 @@ struct Hero {
     var name: String
     var picture: UIImage
     var bio: String
-    
-    var fullName: String
-    var placeOfBirth: String
-    var citizenship: String
-    var height: String
-    var weight: String
-    var hairColor: String
-    var eyeColor: String
-    var uniqueFeatures: String
 }
